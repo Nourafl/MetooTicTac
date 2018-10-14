@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    
+ 
+}
+header{
+    /* background: -webkit-linear-gradient(top, #7390a9, #355e82); */
+    background: black;
+    height: 100px; 
+}
+ header h1{
+    color: rgba(255, 255, 255, 0.616);
+    position: relative;
+} 
+main {
+    display: block;
+    position: center;
+    width:500px;
+    height: 500px;
+   margin: 20%;
+}
+
+table  , td{
+    border: 10px solid white;
+
+    /* background-image: url('frame.png'); */
+    /* background-repeat: no-repeat; */
+    background-color: black;
+    border-collapse: collapse;
+    /* height: 50%;
+    width: 50%; */
+}
+
+td {
+    padding: 50px;
+}
+
+table{
+    border-style: hidden;
+}
+
+
+
+
+
+footer {
+	text-transform: uppercase;
+	padding: 0 20px;
+	background-color: rgb(92, 124, 145);
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 14pc;
+	letter-spacing:.08%;
+	font-weight: 500;
+}
+
+.message  {float:right;
+font-family: releway;
+font-size: 20px}
+
+.clearfix:after {
+	visibility:hidden;
+	display: block;
+	content:" ";
+	clear: both;
+	height: 0;
+	font-size:0;
+}
