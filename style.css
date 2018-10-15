@@ -1,70 +1,106 @@
-body{
-    margin: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-    
- 
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
 }
-header{
-    /* background: -webkit-linear-gradient(top, #7390a9, #355e82); */
-    background: black;
-    height: 100px; 
+header {
+  /* background: -webkit-linear-gradient(top, #7390a9, #355e82); */
+  background: black;
+  height: 100px;
 }
- header h1{
-    color: rgba(255, 255, 255, 0.616);
-    position: relative;
-} 
+header h1 {
+  color: rgba(255, 255, 255, 0.616);
+  position: relative;
+}
 main {
-    display: block;
-    position: center;
-    width:500px;
-    height: 500px;
-   margin: 20%;
+  display: block;
+  position: center;
+  width: 500px;
+  height: 500px;
+  margin: 20%;
 }
 
-table  , td{
-    border: 10px solid white;
+table,
+td {
+  border: 10px solid white;
 
-    /* background-image: url('frame.png'); */
-    /* background-repeat: no-repeat; */
-    background-color: black;
-    border-collapse: collapse;
-    /* height: 50%;
+  /* background-image: url('frame.png'); */
+  /* background-repeat: no-repeat; */
+  background-color: black;
+  border-collapse: collapse;
+  /* height: 50%;
     width: 50%; */
+  font-family: "Comic Sans MS";
+  font-size: 40px;
 }
+/* .square:hover {
+  background-color: yellow;
+} */
 
 td {
-    padding: 50px;
+  padding: 50px;
 }
 
-table{
-    border-style: hidden;
+table {
+  border-style: hidden;
 }
-
-
-
-
 
 footer {
-	text-transform: uppercase;
-	padding: 0 20px;
-	background-color: rgb(92, 124, 145);
-    color: rgba(255, 255, 255, 0.74);
-    font-size: 14pc;
-	letter-spacing:.08%;
-	font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: rgb(92, 124, 145);
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 14pc;
+  letter-spacing: 0.08%;
+  font-weight: 500;
 }
 
-.message  {float:right;
-font-family: releway;
-font-size: 20px}
+.message {
+  float: right;
+  font-family: releway;
+  font-size: 20px;
+}
 
 .clearfix:after {
-	visibility:hidden;
-	display: block;
-	content:" ";
-	clear: both;
-	height: 0;
-	font-size:0;
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
+.square {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor: pointer;
+}
+.square:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+.square:hover:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
 }
