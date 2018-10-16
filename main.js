@@ -1,11 +1,12 @@
 $(document).ready(function () {
-  var turn = 1;
+  var turn = 0;
   var play = true;
   var cells = $("#board tr td");
 
 
   function game() {
     $(cells).click(function () {
+      console.log(turn)
       if ($(this).text() === "" && play) {
         if (turn % 2 == 1) {
           $(this).append("X");
@@ -14,9 +15,11 @@ $(document).ready(function () {
         }
         turn++;
       }
-
       ticTacArray();
+
+
     });
+
     function ticTacArray() {
       var myArray = [
         [$("#1").text(), $("#2").text(), $("#3").text()],
@@ -30,6 +33,8 @@ $(document).ready(function () {
       ];
       var oCount = 0;
       var xCount = 0;
+
+
       for (var i = 0; i < myArray.length; i++) {
         oCount = 0;
         xCount = 0;
@@ -41,24 +46,40 @@ $(document).ready(function () {
             oCount += 1;
           }
           if (oCount === 3 || xCount === 3) {
-            console.log("passed!");
+            // Ternary Operator: condition ? true : false;
+            var current = oCount === 3 ? "Player2" : "Player1";
+            // if (oCount === 3) { current = 'Player2'; }
+            // if (xCount === 3) { current = 'player1' }
+
             $("#board tr td").off("click");
-            $('a').click(function (e) {
-            });
+
             swal({
-              title: "Well Done!",
-              text: "Player # wins the game",
+              title: "Well Done!" + current,
+              text: "wins the game",
               icon: "success",
-              button: true,
+              button: 'Play again'
+
+            });
+            $('button').click(function () {
+
+              location.reload();
+            })
+            return;
+          }
+        }
+        if (turn === 9 && i === myArray.length - 1) {
+          setTimeout(function () {
+
+            swal({
+              title: "Oops!",
+              text: "You got a tie",
+              icon: "error",
+              button: 'lets try again',
             });
             $('button').click(function () {
               location.reload();
             })
-
-          }
-          else {
-            console.log('jh');
-          }
+          });
         }
       }
     }
