@@ -8,17 +8,22 @@
     <title>Tic Tac Toe </title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel='stylesheet' href="style.css">
-    <!-- <script src="main.js"></script> -->
-    <script src="forTry.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="forTry.js"></script> -->
 </head>
 
 <body>
 
-    <header>
-        <h1 class="header1">Tic Tac Toe! </h1>
-    </header>
+
+    <h1 class="header1 neom" data-text='Tic Tac Toe'>Tic Tac Toe! </h1>
     <main>
-        <aside></aside>
+
+
+        <!-- ديف -->
+        <button type="button" class="start"> Lets PLAY! </button>
+        <br>
+        <br>
         <table id="board">
             <tr>
                 <td id='1' class="square top left"></td>
@@ -31,13 +36,16 @@
                 <td id='6' class="square middle right"></td>
             </tr>
             <tr>
-                <td id='6' class="square bottom left"></td>
-                <td id='7' class="square bottom between"></td>
+                <td id='7' class="square bottom left"></td>
+                <td id='8' class="square bottom between"></td>
                 <td id='9' class="square bottom right"></td>
             </tr>
+
         </table>
-
-
+        <br>
+        <br>
+        <!-- <button type="button" class="restart"> Play again! </button> -->
+        <!-- تكون ديف -->
     </main>
     <footer>
         <p class="message"> Have &hearts; Fun </p>

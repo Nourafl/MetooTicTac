@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var turn = 1;
   var play = true;
-  $("#board tr td").click(function() {
+  $("#board tr td").click(function () {
     if ($(this).text() == "" && play) {
       if (turn % 2 == 1) {
         $(this).append("X");
@@ -30,10 +30,17 @@ $(document).ready(function() {
         oCount += 1;
       }
     }
-
+    /// works whith one array
     if (oCount === 3 || xCount === 3) {
       console.log("passed!");
       $("#board tr td").off("click");
+      swal({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success",
+        button: "Aww yiss!",
+      });
+
     } else {
       console.log("failed");
       //  $("#board tr td").off("click");
