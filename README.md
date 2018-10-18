@@ -4,7 +4,7 @@
 this project is a game for two players, who take turns marking the spaces in a 3×3 grid.  The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
 The games take to values X and O . 
-[Tic Tac Toe ](https://nourafl.github.io/MetooTicTac/)
+[Tic Tac Toe ](https://nourafl.github.io/MetooTicTac/)     
 need to zoom out  the page 25% :) 
 
 ### development :
