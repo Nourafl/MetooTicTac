@@ -5,12 +5,16 @@ this project is a game for two players, who take turns marking the spaces in a 3
 
 The games take to values X and O . 
 [Tic Tac Toe ](https://nourafl.github.io/MetooTicTac/)
+need to zoom out  the page 25% :) 
+
 ### development :
 the games based on three functiona  
 1. StartGame(); 
 2.  checkWinner();  
 3.  restGame(); 
-
+  
+  
+  
 
 
 
