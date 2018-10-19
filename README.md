@@ -19,9 +19,13 @@ the games based on three functions
 
 
 ### Credit :
-[google.fonts](https://fonts.google.com/)   
-[jQuarey.CDN](https://code.jquery.com/)   
-[freeImges](https://www.freeimages.com/photo/coming-home-1371162)
+* Moath Althawad.
+* Jack Jeffress
+* Trevor Preston
+
+* [google.fonts](https://fonts.google.com/)   
+* [jQuarey.CDN](https://code.jquery.com/)   
+* [freeImges](https://www.freeimages.com/photo/coming-home-1371162)
 
 
 
@@ -37,4 +41,4 @@ the games based on three functions
 ### bugs need to be fixed:
 * window view
 * score board
-* background color in second round of the game.   
+* background color in the second round of the game.   

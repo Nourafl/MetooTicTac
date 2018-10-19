@@ -32,7 +32,6 @@ $(document).ready(function () {
 
       ticTacArray();
     });
-
     function ticTacArray() {
       var myArray = [
         [$("#1"), $("#2"), $("#3")],
