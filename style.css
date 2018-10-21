@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Mali');
 body {
   background-image: url(woodBlack.jpeg);
-  /* background-repeat: no-repeat; */
   background-size: cover;
   object-fit: contain;
   margin: 0;
@@ -9,44 +8,49 @@ body {
   font-family: sans-serif;
 }
 h1{
-  font-size: 40px;
+  font-size: 30px;
 }
 
+  
+
 main {
-  /* position: absolute; */
+ 
   position: fixed;
-  width: 100vw;
-  height: 87vh;
   margin-top: 13vh;
+  width: 500px;
+  height: 300px;
 }
 
 table,
 td {
+  
   border: 10px solid rgba(255, 255, 255, 0.616);
   color: rgba(255, 255, 255, 0.616);
   border-collapse: collapse;
   background-color: none;
   font-family:  'Mali', cursive;
-  font-size: 40px;
+  font-size: 35px;
   word-wrap: break-word;
-  height: 40px;
-  width: 40px;
-  text-align: center;
+  
 }
+ 
 td {
   padding: 50px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
 }
 
 table {
+  margin-left: 50%;
   border-style: hidden;
   table-layout: fixed;
   overflow: hidden;
-  width: 300px;
-  height: 300px;
   padding: 0;
-  margin: 0 auto;
   margin-top: 20px;
-   /* lines under that for try */
+  margin-right: 45% ;
+   width: 50%;
+  height: 50%;
    
 }
 
@@ -79,26 +83,28 @@ footer {
 }
 .pl{
  display: flex;
+ justify-content: right;
 flex-direction: column; 
 cursor: pointer;
 font-size: 20px;
 font-family:  'Mali';
 color: rgba(255, 255, 255, 0.616);
 position:relative;
- left:20px;
   top:2px;
+  height: 40%;
+  margin-left: 18%;
+  left: 30%;
 }
 
 .container{
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 margin-bottom: 50px; 
 font-size: 20px;
 font-family:  'Mali';
 color: rgba(255, 255, 255, 0.616);
-padding: 25px 50px 75px 100px;
-margin: -354px -90px 34px 120px; 
-
+margin: -553px -90px 34px 120px; 
+height: 40%;
 }
 
 
@@ -158,8 +164,6 @@ margin: -354px -90px 34px 120px;
   padding: 0 20px;
   font-size: 6em;
   color: #fff;
- /* color-shadow: 0 0 20px #ff005b; */
-
 
 }
 .neom:after{

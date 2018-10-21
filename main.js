@@ -6,18 +6,24 @@ $(document).ready(function () {
   var scoreO = 0;
   var startingTurn = 0;//to solve O issue ()
 
-  $(".X").click(function () {
-    turn = 1;
 
-  });
-  $(".O").click(function () {
-    turn = 0;
 
-  }); // works perfect
 
+  function chosePlayer() {
+    $(".X").click(function () {
+      turn = 1;
+      $(this).off()
+    });
+    $(".O").click(function () {
+      turn = 0;
+      $(this).off()
+
+    }); // works perfect ..
+  };
 
 
   function game() {
+    chosePlayer();
     $(cells).click(function () {
 
       if ($(this).text() === "" && play) {
@@ -30,7 +36,7 @@ $(document).ready(function () {
         startingTurn++;
       }
 
-      ticTacArray();
+      ticTacArray();// check winner functiom .. works amazing thanks me
     });
     function ticTacArray() {
       var myArray = [
@@ -62,16 +68,16 @@ $(document).ready(function () {
             if (oCount === 3) {
               current = 'O ';
               scoreO++;
-              sessionStorage.setItem('oScore', scoreO);
+              sessionStorage.setItem("owins", scoreO);
 
             }
             if (xCount === 3) {
               current = 'X'
               scoreX++;
-              sessionStorage.setItem('xScore', scoreX);
-              console.log(scoreO + scoreX);
+              sessionStorage.setItem("xwins", scoreX);
+
             }
-            console.log(myArray[i]);
+
             subArr[0].addClass("winner");// to select the winner cells then add CSS effect 
             subArr[1].addClass("winner");
             subArr[2].addClass("winner");
@@ -79,10 +85,10 @@ $(document).ready(function () {
 
 
             $("#board tr td").off("click");
-            // var text1 = parseInt($("#xScore").text());    turns NaN 3 need to be fixed
-            // $("#xScore").text(text1 + sessionStorage.getItem("xScore"));
-            // var text2 = parentInt($("#oScore").text());
-            // $("#oScore").text(text2 + sessionStorage.getItem("oScore"));
+            var $xscore = parseInt($("xwins").text());    //turns NaN 3 need to be fixed
+            $("#xScore").text($xscore + sessionStorage.getItem("xwins"));
+            var $oscore = parseInt($("owins").text());
+            $("#oScore").text($oscore + sessionStorage.getItem("owins"));
 
 
 
@@ -130,7 +136,7 @@ $(document).ready(function () {
 
   function resetG() {
     $(cells).text("");
-    $(cells).css("background", "rgba(167, 100, 137, 0)"); // rest function works good but when  the game start Aftrer resetG() the background color inside ticTacArray wont change 
+    $(cells).removeClass("winner"); // clear winner background
     turn = 0;
     play = true;
     startingTurn = 0;
