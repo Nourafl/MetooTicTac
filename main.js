@@ -23,7 +23,9 @@ $(document).ready(function () {
 
 
   function game() {
+    console.log(sessionStorage)
     chosePlayer();
+    $(cells).off();
     $(cells).click(function () {
 
       if ($(this).text() === "" && play) {
@@ -39,6 +41,7 @@ $(document).ready(function () {
       ticTacArray();// check winner functiom .. works amazing thanks me
     });
     function ticTacArray() {
+      console.log(sessionStorage)
       var myArray = [
         [$("#1"), $("#2"), $("#3")],
         [$("#3"), $("#6"), $("#9")],
@@ -66,16 +69,14 @@ $(document).ready(function () {
           if (oCount === 3 || xCount === 3) {
 
             if (oCount === 3) {
-              current = 'O ';
+              current = 'O';
               scoreO++;
               sessionStorage.setItem("owins", scoreO);
-
             }
             if (xCount === 3) {
               current = 'X'
               scoreX++;
               sessionStorage.setItem("xwins", scoreX);
-
             }
 
             subArr[0].addClass("winner");// to select the winner cells then add CSS effect 
@@ -85,13 +86,10 @@ $(document).ready(function () {
 
 
             $("#board tr td").off("click");
-            var $xscore = parseInt($("xwins").text());    //turns NaN 3 need to be fixed
-            $("#xScore").text($xscore + sessionStorage.getItem("xwins"));
-            var $oscore = parseInt($("owins").text());
-            $("#oScore").text($oscore + sessionStorage.getItem("owins"));
-
-
-
+            var $xscore = parseInt($("#xScore").text()) || 0;
+            $("#xScore").text(parseInt(sessionStorage.getItem("xwins")) || 0);
+            var $oscore = parseInt($("#oScore").text()) || 0;
+            $("#oScore").text(parseInt(sessionStorage.getItem("owins")) || 0);
 
 
             swal({
