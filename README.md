@@ -1,15 +1,15 @@
 
 
 # Tic Tac Toe
-this project is a game for two players, who take turns marking the spaces in a 3×3 grid.  The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+This project is a game for two players, who take turns marking the spaces in a 3×3 grid.  The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
 The games take to values X and O . 
 [Tic Tac Toe ](https://nourafl.github.io/MetooTicTac/)     
 
 
 ### development :
-the games based on three functions 
-1. StartGame(); 
+the game based on three functions 
+1.  StartGame(); 
 2.  checkWinner();  
 3.  restGame(); 
   
